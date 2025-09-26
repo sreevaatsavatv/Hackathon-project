@@ -121,32 +121,16 @@ export default function Landing() {
           </>
         ) : (
           <>
-            <input
-              className="w-full mb-4 px-4 py-2 border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-              type="text"
-              placeholder="Enter your name (Student)"
-              value={studentName}
-              onChange={(e) => {
-                setStudentName(e.target.value);
-                setError("");
-              }}
-            />
-            {error && (
-              <div className="text-red-500 mb-2 animate-shake">{error}</div>
-            )}
-            <div className="flex flex-col gap-4">
-              <button
-                className="w-full py-3 rounded bg-blue-500 text-white text-lg font-semibold hover:bg-blue-600 active:scale-95 transition"
-                onClick={handleStudent}
-              >
-                I am a Student
-              </button>
-              <button
-                className="w-full py-3 rounded border border-blue-500 text-blue-600 text-lg font-semibold hover:bg-blue-50 active:scale-95 transition"
-                onClick={() => navigate("/mentor")}
-              >
-                I am a Mentor
-              </button>
+            <div className="text-gray-600 text-center">
+              Please{" "}
+              <a href="/login" className="text-blue-600 underline">
+                login
+              </a>{" "}
+              or{" "}
+              <a href="/register" className="text-blue-600 underline">
+                register
+              </a>{" "}
+              to continue.
             </div>
           </>
         )}
